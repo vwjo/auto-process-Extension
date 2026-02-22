@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Auto Process Spreadsheet</title>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="main-layout">
+
+		<div class="left-panel">
+			<div class="table-tabs">
+				<button class="tab-btn-nav active">TABLE 1</button>
+				<button class="tab-btn-nav">TABLE 2</button>
+				<button class="tab-btn-nav">TABLE 3</button>
+				<button class="tab-btn-nav">TABLE 4</button>
+			</div>
+
+			<div id="tab-content-0" class="tab-content active">
+				<div class="card sheet-container">
+					<div class="header-wrapper">
+						<table>
+							<colgroup>
+								<col class="col-no">
+								<col class="col-id">
+								<col class="col-coin">
+								<col class="col-amount">
+								<col class="col-info">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>ID</th>
+									<th>Coin</th>
+									<th>Amount</th>
+									<th>Information</th>
+								</tr>
+							</thead>
+						</table>
+						<div class="scrollbar-compensator"></div>
+					</div>
+					<div class="table-scroll-area">
+						<table>
+							<colgroup>
+								<col class="col-no">
+								<col class="col-id">
+								<col class="col-coin">
+								<col class="col-amount">
+								<col class="col-info">
+							</colgroup>
+							<tbody id="sheetBody0"></tbody>
+						</table>
+					</div>
+				</div>
+				<div class="filter-section">
+					<div class="filter-title">Data Filter - Tabel 1</div>
+					<div class="filter-layout">
+						<textarea id="rawFilterInput0" class="raw-data-input"
+							placeholder="Paste raw mutation data here..."></textarea>
+						<button id="btnProcessFilter0" class="btn-process-filter">Filter & Process</button>
+					</div>
+				</div>
+			</div>
+
+			<div id="tab-content-1" class="tab-content">
+				<div class="card sheet-container">
+					<div class="header-wrapper">
+						<table>
+							<colgroup>
+								<col class="col-no">
+								<col class="col-id">
+								<col class="col-coin">
+								<col class="col-amount">
+								<col class="col-info">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>ID</th>
+									<th>Coin</th>
+									<th>Amount</th>
+									<th>Information</th>
+								</tr>
+							</thead>
+						</table>
+						<div class="scrollbar-compensator"></div>
+					</div>
+					<div class="table-scroll-area">
+						<table>
+							<colgroup>
+								<col class="col-no">
+								<col class="col-id">
+								<col class="col-coin">
+								<col class="col-amount">
+								<col class="col-info">
+							</colgroup>
+							<tbody id="sheetBody1"></tbody>
+						</table>
+					</div>
+				</div>
+				<div class="filter-section">
+					<div class="filter-title">Data Filter - Tabel 2</div>
+					<div class="filter-layout">
+						<textarea id="rawFilterInput1" class="raw-data-input"
+							placeholder="Paste raw mutation data here..."></textarea>
+						<button id="btnProcessFilter1" class="btn-process-filter">Filter & Process</button>
+					</div>
+				</div>
+			</div>
+
+			<div id="tab-content-2" class="tab-content">
+				<div class="card sheet-container">
+					<div class="header-wrapper">
+						<table>
+							<colgroup>
+								<col class="col-no">
+								<col class="col-id">
+								<col class="col-coin">
+								<col class="col-amount">
+								<col class="col-info">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>ID</th>
+									<th>Coin</th>
+									<th>Amount</th>
+									<th>Information</th>
+								</tr>
+							</thead>
+						</table>
+						<div class="scrollbar-compensator"></div>
+					</div>
+					<div class="table-scroll-area">
+						<table>
+							<colgroup>
+								<col class="col-no">
+								<col class="col-id">
+								<col class="col-coin">
+								<col class="col-amount">
+								<col class="col-info">
+							</colgroup>
+							<tbody id="sheetBody2"></tbody>
+						</table>
+					</div>
+				</div>
+				<div class="filter-section">
+					<div class="filter-title">Data Filter - Tabel 3</div>
+					<div class="filter-layout">
+						<textarea id="rawFilterInput2" class="raw-data-input"
+							placeholder="Paste raw mutation data here..."></textarea>
+						<button id="btnProcessFilter2" class="btn-process-filter">Filter & Process</button>
+					</div>
+				</div>
+			</div>
+
+			<div id="tab-content-3" class="tab-content">
+				<div class="card sheet-container">
+					<div class="header-wrapper">
+						<table>
+							<colgroup>
+								<col class="col-no">
+								<col class="col-id">
+								<col class="col-coin">
+								<col class="col-amount">
+								<col class="col-info">
+							</colgroup>
+							<thead>
+								<tr>
+									<th>No</th>
+									<th>ID</th>
+									<th>Coin</th>
+									<th>Amount</th>
+									<th>Information</th>
+								</tr>
+							</thead>
+						</table>
+						<div class="scrollbar-compensator"></div>
+					</div>
+					<div class="table-scroll-area">
+						<table>
+							<colgroup>
+								<col class="col-no">
+								<col class="col-id">
+								<col class="col-coin">
+								<col class="col-amount">
+								<col class="col-info">
+							</colgroup>
+							<tbody id="sheetBody3"></tbody>
+						</table>
+					</div>
+				</div>
+				<div class="filter-section">
+					<div class="filter-title">Data Filter - Tabel 4</div>
+					<div class="filter-layout">
+						<textarea id="rawFilterInput3" class="raw-data-input"
+							placeholder="Paste raw mutation data here..."></textarea>
+						<button id="btnProcessFilter3" class="btn-process-filter">Filter & Process</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="footer-tools">
+				<label style="font-size: 14px; font-weight: 600; color: var(--text-color);">Add Row:</label>
+				<input type="number" id="rowCountInput" value="10">
+				<button class="btn btn-add" id="addBtn">Add</button>
+			</div>
+		</div>
+
+		<div class="right-panel">
+			<div class="card control-box">
+				<h3 class="control-header">Control Panel</h3>
+				<div class="control-body">
+
+					<div class="config-main-wrapper">
+						<div class="config-main-header" id="toggleMainConfigBtn">
+							<span>CONFIGURATION</span>
+							<span id="mainConfigToggleIcon"></span>
+						</div>
+
+						<div id="mainConfigContent" class="config-body">
+							
+							<div class="sub-config-item">
+								<div class="domain-header" id="toggleDomainBtn">
+									<span>TARGET DOMAINS</span>
+									<span id="domainToggleIcon"></span>
+								</div>
+								
+								<div id="domainContent" style="display: none; padding-top: 12px;">
+									<div id="domainInputsContainer">
+									</div>
+									<button id="addDomainBoxBtn" class="btn-domain-action btn-domain-add" title="Add Domain">
+										<svg viewBox="0 0 24 24">
+											<line x1="12" y1="5" x2="12" y2="19"></line>
+											<line x1="5" y1="12" x2="19" y2="12"></line>
+										</svg>
+									</button>
+									<button id="saveDomainsBtn" class="btn btn-copy">SAVE DOMAINS</button>
+								</div>
+							</div>
+
+							<div class="sub-config-item">
+								<div class="domain-header" id="toggleUniqueIdBtn">
+									<span>UNIQUE ID CONFIG</span>
+									<span id="uniqueIdToggleIcon"></span>
+								</div>
+								
+								<div id="uniqueIdContent" style="display: none; padding-top: 12px;">
+									<div id="uniqueIdInputsContainer">
+									</div>
+									<button id="addUniqueIdBoxBtn" class="btn-domain-action btn-domain-add" title="Add Unique ID">
+										<svg viewBox="0 0 24 24">
+											<line x1="12" y1="5" x2="12" y2="19"></line>
+											<line x1="5" y1="12" x2="19" y2="12"></line>
+										</svg>
+									</button>
+									<button id="saveUniqueIdsBtn" class="btn btn-copy">SAVE UNIQUE IDS</button>
+								</div>
+							</div>
+
+							<div class="sub-config-item">
+								<div class="domain-header" id="toggleApiBtn">
+									<span>GOOGLE SHEET API</span>
+									<span id="apiToggleIcon"></span>
+								</div>
+								<div id="apiContent" style="display: none; padding-top: 12px;">
+									<div class="domain-input-row">
+										<input type="text" id="scriptUrlInput" class="domain-input-box" placeholder="Paste Web App URL here..." style="text-align: left; font-weight: normal;">
+									</div>
+									<button id="saveScriptUrlBtn" class="btn btn-copy">SAVE URL</button>
+								</div>
+							</div>
+
+							<div class="sub-config-item">
+								<div class="domain-header" id="toggleColumnMapBtn">
+									<span>COLUMN MAPPING</span>
+									<span id="columnMapToggleIcon"></span>
+								</div>
+								<div id="columnMapContent" style="display: none; padding-top: 12px;">
+									
+									<div class="domain-input-row" style="margin-bottom: 4px;">
+										<span class="mapping-label">T1:</span>
+										<input type="text" id="map_id_0" class="domain-input-box" placeholder="ID (Z)" style="text-align: center; padding: 6px;">
+										<input type="text" id="map_coin_0" class="domain-input-box" placeholder="Coin (AA)" style="text-align: center; padding: 6px;">
+										<input type="text" id="map_amount_0" class="domain-input-box" placeholder="Amt (AB)" style="text-align: center; padding: 6px;">
+										<input type="text" id="map_info_0" class="domain-input-box" placeholder="Info (AG)" style="text-align: center; padding: 6px;">
+									</div>
+									
+									<div class="domain-input-row" style="margin-bottom: 4px;">
+										<span class="mapping-label">T2:</span>
+										<input type="text" id="map_id_1" class="domain-input-box" placeholder="ID (J)" style="text-align: center; padding: 6px;">
+										<input type="text" id="map_coin_1" class="domain-input-box" placeholder="Coin (K)" style="text-align: center; padding: 6px;">
+										<input type="text" id="map_amount_1" class="domain-input-box" placeholder="Amt (L)" style="text-align: center; padding: 6px;">
+										<input type="text" id="map_info_1" class="domain-input-box" placeholder="Info (Q)" style="text-align: center; padding: 6px;">
+									</div>
+
+									<div class="domain-input-row" style="margin-bottom: 4px;">
+										<span class="mapping-label">T3:</span>
+										<input type="text" id="map_id_2" class="domain-input-box" placeholder="ID (R)" style="text-align: center; padding: 6px;">
+										<input type="text" id="map_coin_2" class="domain-input-box" placeholder="Coin (S)" style="text-align: center; padding: 6px;">
+										<input type="text" id="map_amount_2" class="domain-input-box" placeholder="Amt (T)" style="text-align: center; padding: 6px;">
+										<input type="text" id="map_info_2" class="domain-input-box" placeholder="Info (Y)" style="text-align: center; padding: 6px;">
+									</div>
+
+									<div class="domain-input-row" style="margin-bottom: 4px;">
+										<span class="mapping-label">T4:</span>
+										<input type="text" id="map_id_3" class="domain-input-box" placeholder="ID (B)" style="text-align: center; padding: 6px;">
+										<input type="text" id="map_coin_3" class="domain-input-box" placeholder="Coin (C)" style="text-align: center; padding: 6px;">
+										<input type="text" id="map_amount_3" class="domain-input-box" placeholder="Amt (D)" style="text-align: center; padding: 6px;">
+										<input type="text" id="map_info_3" class="domain-input-box" placeholder="Info (I)" style="text-align: center; padding: 6px;">
+									</div>
+
+									<button id="saveMappingBtn" class="btn btn-copy">SAVE MAPPING</button>
+								</div>
+							</div>
+							</div>
+					</div>
+					<div id="statusTag" class="status-indicator status-stopped">STATUS: STOPPED</div>
+					<div class="btn-group">
+						<button id="startBtn" class="btn btn-start">START</button>
+						<button id="stopBtn" class="btn btn-stop">STOP</button>
+					</div>
+					<div class="btn-group" id="copyDeleteGroup">
+						<button id="copyBtn" class="btn btn-copy">COPY DATA</button>
+						<button id="deleteBtn" class="btn btn-delete">DELETE ALL</button>
+					</div>
+					<div class="btn-group">
+						<button id="ManualsendBtn" class="btn btn-manual-send">MANUAL SEND</button>
+						<button id="AutosendBtn" class="btn btn-auto-send">AUTO SEND</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="card log-container-wrapper">
+				<h4 class="control-header">Process Log</h4>
+				<div id="logBox" class="log-box-content">
+					System ready...<br>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="table_logic.js"></script>
+	<script src="bridge_listener.js"></script>
+
+</body>
+</html>
